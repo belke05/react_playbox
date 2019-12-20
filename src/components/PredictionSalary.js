@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Prediction({ prediction }) {
+export default function PredictionSalary({ prediction }) {
   function financial(x) {
     return Number.parseFloat(x).toFixed(2);
   }

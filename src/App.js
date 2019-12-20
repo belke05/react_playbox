@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef } from "react";
 
-import "./styles/App.css";
 import SalaryPage from "./pages/SalaryPage";
 import AdmissionPage from "./pages/AdmissionPage";
 import Navigator from "./components/Navigator";
@@ -8,10 +7,17 @@ import Navigator from "./components/Navigator";
 import { Switch, Route } from "react-router-dom";
 
 function App() {
+  const app = useRef(0);
+  useEffect(() => {
+    const nav = document.querySelector(".navbar");
+    console.log(nav.offsetHeight);
+    const navHeight = nav.offsetHeight;
+    app.current.height = window.innerHeight - navHeight;
+  }, []);
   return (
-    <div style={{ height: "100vh" }}>
+    <div>
       <Navigator />
-      <div className="App">
+      <div ref={app} className="App">
         <Switch>
           <Route exact path="/" component={SalaryPage} />
           <Route exact path="/salarypage" component={SalaryPage} />

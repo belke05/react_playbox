@@ -35,7 +35,7 @@ export default function Input({
       <form onSubmit={handleClick} className="form">
         {admissiondatakeys.slice(0, -1).map((key, i) => {
           return (
-            <div className="input_wrapper">
+            <div className="admission_input_wrapper">
               <b>{key}</b>
               <input
                 value={admissionData[key]}
@@ -47,7 +47,7 @@ export default function Input({
             </div>
           );
         })}
-        <div className="input_wrapper">
+        <div className="admission_input_wrapper">
           <b>{admissiondatakeys.slice(-1)[0]}</b>
           <input
             value={admissionData[admissiondatakeys.slice(-1)[0]]}
