@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+
+import "./styles/App.css";
+import SalaryPage from "./pages/SalaryPage";
+import AdmissionPage from "./pages/AdmissionPage";
+import Navigator from "./components/Navigator";
+
+import { Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ height: "100vh" }}>
+      <Navigator />
+      <div className="App">
+        <Switch>
+          <Route exact path="/" component={SalaryPage} />
+          <Route exact path="/salarypage" component={SalaryPage} />
+          <Route exact path="/admissionpage" component={AdmissionPage} />
+        </Switch>
+      </div>
     </div>
   );
 }
