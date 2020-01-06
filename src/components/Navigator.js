@@ -17,6 +17,16 @@ export default function Navigator() {
             Predict my admission
           </Nav.Link>
         </Link>
+        <Link to="/textpage">
+          <Nav.Link eventKey="disabled" disabled>
+            predict my text
+          </Nav.Link>
+        </Link>
+        <Link to="/wordcountpage">
+          <Nav.Link eventKey="disabled" disabled>
+            count words based on url
+          </Nav.Link>
+        </Link>
       </Nav>
     </Navbar>
   );

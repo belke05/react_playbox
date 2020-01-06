@@ -2,7 +2,9 @@ import React, { useEffect, useRef } from "react";
 
 import SalaryPage from "./pages/SalaryPage";
 import AdmissionPage from "./pages/AdmissionPage";
+import TextPage from "./pages/TextPage";
 import Navigator from "./components/Navigator";
+import WordCountPage from "./pages/WordCountPage";
 
 import { Switch, Route } from "react-router-dom";
 
@@ -22,6 +24,8 @@ function App() {
           <Route exact path="/" component={SalaryPage} />
           <Route exact path="/salarypage" component={SalaryPage} />
           <Route exact path="/admissionpage" component={AdmissionPage} />
+          <Route exact path="/textpage" component={TextPage} />
+          <Route exact path="/wordcountpage" component={WordCountPage} />
         </Switch>
       </div>
     </div>

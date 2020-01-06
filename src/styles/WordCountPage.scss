@@ -1,0 +1,23 @@
+.wordcountpage {
+  height: 100%;
+}
+
+.wordcountpage .input_wrapper,
+.wordcountpage button {
+  margin-top: 3%;
+}
+.wordcountpage .input_wrapper {
+  flex-direction: column;
+}
+
+.wordcountpage .input_wrapper,
+.wordcountpage .input_wrapper > div {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wordcountpage .input_wrapper > div input {
+  margin: 1%;
+}
